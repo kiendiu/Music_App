@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimation"
+            android:layout_width="wrap_content"
+            android:layout_height="247dp"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/sax" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registration"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:layout_marginBottom="24dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_background"
+            android:backgroundTint="#fff"
+            android:drawableLeft="@drawable/icon__mail_"
+            android:drawablePadding="8dp"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:foregroundTint="#fff"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:minHeight="50dp"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:passwordToggleEnabled="true"
+            app:errorEnabled="false">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_background"
+            android:backgroundTint="#FFF"
+            android:drawableLeft="@drawable/lock"
+            android:drawablePadding="8dp"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:foregroundTint="#fff"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:minHeight="50dp"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:layout_marginBottom="24dp" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:textColor="@color/gold"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:id="@+id/to_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back to login !!"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+    </LinearLayout>
+</ScrollView>

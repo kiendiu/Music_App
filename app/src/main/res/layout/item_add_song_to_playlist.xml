@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imgPlaylist"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/common_google_signin_btn_text_light_normal_background" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:id="@+id/playlistName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Playlist Name"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/songCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 Songs"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checkboxAddToPlaylist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="8dp" />
+
+</LinearLayout>

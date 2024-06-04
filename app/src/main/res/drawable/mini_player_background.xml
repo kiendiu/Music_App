@@ -1,0 +1,17 @@
+<!-- res/drawable/mini_player_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:angle="45"
+                android:startColor="#153448"
+                android:endColor="#1F5363"
+                android:type="linear" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</layer-list>

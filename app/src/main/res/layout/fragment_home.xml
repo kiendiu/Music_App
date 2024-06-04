@@ -1,0 +1,146 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragment.BottomMenuFragment.HomeFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                        <ViewFlipper
+                            android:layout_width="match_parent"
+                            android:layout_height="230dp"
+                            android:inAnimation="@anim/slide_in_left"
+                            android:outAnimation="@anim/slide_out_right"
+                            android:autoStart="true">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="230dp"
+                                android:src="@drawable/album_cover_1"
+                                android:scaleType="centerCrop"/>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="230dp"
+                                android:src="@drawable/ye"
+                                android:scaleType="centerCrop"/>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="230dp"
+                                android:src="@drawable/sza"
+                                android:scaleType="centerCrop"/>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="230dp"
+                                android:src="@drawable/pinkfloyd"
+                                android:scaleType="centerCrop"/>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="230dp"
+                                android:src="@drawable/sza_sos"
+                                android:scaleType="centerCrop"/>
+                        </ViewFlipper>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:text="Top Artists"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageButton
+                            android:id="@+id/btn_artists_prev"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_arrow_left"
+                            tools:ignore="TouchTargetSizeCheck"/>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/artists_recycler_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+
+                        <ImageButton
+                            android:id="@+id/btn_artists_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_arrow_right"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Categories"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/categories_recycler_view"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="40dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

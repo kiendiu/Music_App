@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.musica.SplashActivity"
+    >
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/guitar" />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lottieAnimation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:text="Musica"
+        />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Music gives a soul to the universe, wings to the mind, flight to the imagination, and life to everything."
+        android:textStyle="italic"
+        android:textSize="14sp"
+        android:textColor="#686D76"
+        android:gravity="center"
+        />
+</RelativeLayout>

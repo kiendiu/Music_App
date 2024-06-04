@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mini_player_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/mini_player_background"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/miniImgSongs"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:background="@drawable/circle_background"
+        android:elevation="4dp"
+        />
+
+    <TextView
+        android:id="@+id/miniNameSongs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/miniImgSongs"
+        android:layout_marginStart="16dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Title of the song"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/miniArtistsSongs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/miniNameSongs"
+        android:layout_toEndOf="@id/miniImgSongs"
+        android:layout_marginStart="16dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Artists"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginTop="2dp" />
+
+    <ImageView
+        android:id="@+id/miniPausePlay"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/baseline_pause_circle_outline_24"
+        android:layout_centerVertical="true"
+        android:elevation="4dp" />
+</RelativeLayout>
